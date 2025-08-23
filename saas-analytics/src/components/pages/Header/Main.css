@@ -1,0 +1,103 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--card);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-logo {
+  color: var(--primary);
+}
+
+.header-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--card-foreground);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  cursor: pointer;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition:
+    background 0.2s,
+    color 0.2s,
+    box-shadow 0.2s,
+    border 0.2s,
+    transform 0.2s;
+}
+
+.theme-toggle:hover {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border: 1px solid var(--primary);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px) scale(1.02);
+}
+
+.theme-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.header-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border);
+  transition:
+    background 0.2s,
+    color 0.2s,
+    box-shadow 0.2s,
+    border 0.2s;
+}
+
+.header-action:hover {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--primary);
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* Optional: Add focus style for accessibility */
+.header-action:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary);
+}
