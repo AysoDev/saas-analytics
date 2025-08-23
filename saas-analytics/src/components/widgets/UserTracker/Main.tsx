@@ -23,8 +23,7 @@ export default function UserTracker() {
                     <User size={18} />
                 </span>
                 <span className="ptr-breadcrumbs">
-                    <span className="ptr-breadcrumb main">User: </span>
-                    <span>Jhon Doe</span>
+                    <span className="ptr-breadcrumb main">Jhon Doe</span>
                 </span>
             </div>
         </nav>

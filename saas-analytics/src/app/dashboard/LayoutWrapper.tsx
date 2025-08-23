@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Header } from '@/components/pages/Header/Main';
 import { Sidenav } from '@/components/pages/Sidenav/Main';
-import './theme.css';
+import '../theme.css';
 
 export default function LayoutWrapper({
   children,

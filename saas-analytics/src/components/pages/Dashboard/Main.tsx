@@ -1,19 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Metric } from '@/components/widgets/Metric/Main';
-import { MetricSkeleton } from '@/components/widgets/Metric/Main';
 import { Card } from '@/components/widgets/Card/Main';
 import { Chart } from '@/components/widgets/Chart/Main';
 import { DashboardData } from './Types';
-import { 
-  DollarSign, 
-  Users, 
-  TrendingUp, 
-  Activity 
-} from 'lucide-react';
 import './Main.css';
 import { Suspense } from 'react';
+import MetricCards from './Metrics';
 
 export const Dashboard = () => {
   const [data, setData] = useState<DashboardData>();
@@ -58,41 +51,7 @@ export const Dashboard = () => {
       </div>
 
       <div className="dashboard-metrics">
-        <Suspense fallback={<MetricSkeleton />}>
-          <Metric
-            title="Total Revenue"
-            value={data?.totalRevenue ?? 0}
-            change={12.5}
-            icon={<DollarSign size={20} />}
-            format="currency"
-          />
-        </Suspense>
-        <Suspense fallback={<MetricSkeleton />}>
-          <Metric
-            title="New Users"
-            value={data?.newUsers ?? 0}
-            change={8.2}
-            icon={<Users size={20} />}
-          />
-        </Suspense>
-        <Suspense fallback={<MetricSkeleton />}>
-          <Metric
-            title="Conversion Rate"
-            value={data?.conversions ?? 0}
-            change={-3.1}
-            icon={<TrendingUp size={20} />}
-            format="percent"
-          />
-        </Suspense>
-        <Suspense fallback={<MetricSkeleton />}>
-          <Metric
-            title="Churn Rate"
-            value={data?.churnRate ?? 0}
-            change={-15.3}
-            icon={<Activity size={20} />}
-            format="percent"
-          />
-        </Suspense>
+        <MetricCards />
       </div>
 
       <div className="dashboard-content">

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
-import "./globals.css";
-import "./theme.css";
+import "../globals.css";
+import "../theme.css";
+import LayoutWrapper from "./LayoutWrapper";
 
 const NunitoSans = Nunito({
   variable: "--font-nunito",
@@ -9,7 +10,7 @@ const NunitoSans = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "SaaS Analytics | Login",
+  title: "SaaS Analytics",
   description: "Open-source analytics platform.",
 };
 
@@ -19,12 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="light">
-      <body
-        className={`${NunitoSans.className} antialiased`}
-      >
+        <LayoutWrapper>
             {children}
-      </body>
-    </html>
+        </LayoutWrapper>
   );
 }

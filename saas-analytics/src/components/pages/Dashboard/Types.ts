@@ -12,3 +12,5 @@ export interface DashboardData {
     }[];
   };
 }
+
+export type DashboardMetrics = Omit<DashboardData, 'chartData'>;

@@ -5,9 +5,7 @@ import './Main.css';
 import { Route, ChevronRight } from "lucide-react";
 
 export default function PathTracker () {
-    // Uncomment for production
-    // const pathname = usePathname();
-    const pathname = "/dashboard/settings"; // Test example
+    const pathname = usePathname();
 
     const segments = pathname.split('/').filter(Boolean);
 

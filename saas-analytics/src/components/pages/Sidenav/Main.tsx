@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { 
   BarChart3, 
@@ -16,10 +16,15 @@ import {
 import { SidenavProps, NavItem } from './Types'
 import './Main.css'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const Sidenav = ({ isOpen, onToggle }: SidenavProps) => {
-  const pathname = usePathname()
-  const [activeItem, setActiveItem] = useState('dashboard')
+  const pathname = usePathname();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const navItems: NavItem[] = [
     {
@@ -32,20 +37,20 @@ export const Sidenav = ({ isOpen, onToggle }: SidenavProps) => {
       id: 'customers',
       label: 'Customers',
       icon: <Users size={20} />,
-      href: '/customers',
+      href: '/dashboard/customers',
       badge: 12,
     },
     {
       id: 'revenue',
       label: 'Revenue',
       icon: <DollarSign size={20} />,
-      href: '/revenue',
+      href: '/dashboard/revenue',
     },
     {
       id: 'settings',
       label: 'Settings',
       icon: <Settings size={20} />,
-      href: '/settings',
+      href: '/dashboard/settings',
     },
     {
       id: 'help',
@@ -53,11 +58,12 @@ export const Sidenav = ({ isOpen, onToggle }: SidenavProps) => {
       icon: <HelpCircle size={20} />,
       href: '/help',
     },
-  ]
+  ];
 
-  const handleItemClick = (id: string) => {
-    setActiveItem(id)
-  }
+  // Only derive current on client
+  const current = mounted
+    ? (navItems.find(item => pathname === item.href)?.id ?? 'dashboard')
+    : null;
 
   return (
     <>
@@ -97,10 +103,9 @@ export const Sidenav = ({ isOpen, onToggle }: SidenavProps) => {
           <ul className="sidenav-menu">
             {navItems.map((item) => (
               <li key={item.id} className="sidenav-item">
-                <a
+                <Link
                   href={item.href}
-                  className={`sidenav-link ${activeItem === item.id ? 'active' : ''}`}
-                  onClick={() => handleItemClick(item.id)}
+                  className={`sidenav-link${mounted && current === item.id ? ' active' : ''}`}
                 >
                   <span className="sidenav-icon">{item.icon}</span>
                   {isOpen && (
@@ -111,17 +116,17 @@ export const Sidenav = ({ isOpen, onToggle }: SidenavProps) => {
                       )}
                     </>
                   )}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </div>
 
         <div className="sidenav-footer">
-          <a href="/logout" className="sidenav-link">
+          <Link href="/logout" className="sidenav-link">
             <span className="sidenav-icon"><LogOut size={20} /></span>
             {isOpen && <span className="sidenav-label">Logout</span>}
-          </a>
+          </Link>
         </div>
       </nav>
 
