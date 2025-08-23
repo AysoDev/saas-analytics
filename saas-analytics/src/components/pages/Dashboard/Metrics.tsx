@@ -28,7 +28,6 @@ export default function MetricCards () {
                 totalRevenue: 124563,
                 newUsers: 2453,
                 conversions: 12.4,
-                churnRate: 2.3,
             }
             setData(mockData)
         }
@@ -40,7 +39,6 @@ export default function MetricCards () {
     if (loading || !data) {
         return (
             <>
-                <MetricSkeleton />
                 <MetricSkeleton />
                 <MetricSkeleton />
                 <MetricSkeleton />
@@ -68,13 +66,6 @@ export default function MetricCards () {
                 value={data.conversions}
                 change={-3.1}
                 icon={<TrendingUp size={20} />}
-                format="percent"
-            />
-            <Metric
-                title="Churn Rate"
-                value={data.churnRate}
-                change={-15.3}
-                icon={<Activity size={20} />}
                 format="percent"
             />
         </>
