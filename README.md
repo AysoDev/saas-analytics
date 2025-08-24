@@ -8,7 +8,9 @@
   <img src="https://img.shields.io/github/license/AysoDev/saas-analytics?style=for-the-badge" alt="License">
 </p>
 
-![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)
+<p align="center">
+  ![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)
+</p>
 
 <p align="center">
   <strong>A modern, open-source analytics dashboard for SaaS companies</strong><br/>
