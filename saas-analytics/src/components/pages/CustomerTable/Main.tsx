@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 import { Customer } from '../Customers/Types'
 import './Main.css'
+import { CustomerDetailsModal } from './CustomerDetails/Main'
 
 interface CustomerTableProps {
   customers: Customer[]
@@ -24,6 +25,7 @@ export const CustomerTable = ({ customers, isLoading, onRefresh }: CustomerTable
   const [currentPage, setCurrentPage] = useState(1)
   const [itemsPerPage] = useState(10)
   const [selectedCustomer, setSelectedCustomer] = useState<Customer | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const totalPages = Math.ceil(customers.length / itemsPerPage)
   const startIndex = (currentPage - 1) * itemsPerPage
@@ -39,6 +41,12 @@ export const CustomerTable = ({ customers, isLoading, onRefresh }: CustomerTable
 
   const handleView = (customer: Customer) => {
     setSelectedCustomer(customer)
+    setIsModalOpen(true)
+  }
+
+  const handleSave = (updatedCustomer: Customer) => {
+    // TODO: Implement customer update logic in parent and pass handler via props
+    setSelectedCustomer(updatedCustomer)
   }
 
   const StatusBadge = ({ status }: { status: string }) => {
@@ -204,6 +212,13 @@ export const CustomerTable = ({ customers, isLoading, onRefresh }: CustomerTable
           </button>
         </div>
       )}
+      <CustomerDetailsModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        customer={selectedCustomer}
+        onSave={handleSave}
+        mode="view"
+      />
     </div>
   )
 }

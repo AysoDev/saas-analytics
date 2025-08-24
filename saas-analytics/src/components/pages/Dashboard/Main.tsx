@@ -18,7 +18,6 @@ export const Dashboard = () => {
         totalRevenue: 124563,
         newUsers: 2453,
         conversions: 12.4,
-        churnRate: 2.3,
         chartData: {
           labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
           datasets: [

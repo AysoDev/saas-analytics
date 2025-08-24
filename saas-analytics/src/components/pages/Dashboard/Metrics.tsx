@@ -21,7 +21,7 @@ export default function MetricCards () {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 2000);
+        }, 1000);
 
         const fetchData = async () => {
             const mockData: DashboardMetrics = {
