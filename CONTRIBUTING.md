@@ -27,7 +27,7 @@ There are several ways to contribute:
 1. Fork the repository
 2. Clone your fork locally
    ```bash
-   git clone https://github.com/your-username/saas-analytics.git
+   git clone https://github.com/AysoDev/saas-analytics.git
    ```
 3. Create a branch for your feature/fix
    ```bash
