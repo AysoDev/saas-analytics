@@ -182,7 +182,7 @@ pnpm run dev
 
 ## Live Demo
 
-> [View Live Demo](https://saas-analytics.vercel.app)
+> [View Live Demo](https://saas-analytics-admin.vercel.app)
 
 ---
 
