@@ -3,10 +3,11 @@
 import { useEffect, useRef } from 'react'
 import { ChartProps } from './Types'
 import './Main.css'
+import { Chart as ChartJS } from "chart.js"
 
 export const Chart = ({ data, type, title, height = 300 }: ChartProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const chartRef = useRef<any>(null)
+  const chartRef = useRef<ChartJS | null>(null)
 
   useEffect(() => {
     // Dynamically import Chart.js to avoid SSR issues
