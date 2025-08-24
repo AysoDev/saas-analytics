@@ -84,7 +84,7 @@ export const Chart = ({ data, type, title, height = 300 }: ChartProps) => {
                   callbacks: {
                     label: function(context) {
                       const label = context.dataset.label || '';
-                      let value = context.parsed.y ?? context.parsed;
+                      const value = context.parsed.y ?? context.parsed;
                       if (label === 'Revenue') {
                         return `${label}: $${value.toLocaleString()}`;
                       }
