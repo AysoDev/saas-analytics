@@ -156,42 +156,33 @@ saas-analytics/
 
 ### Prerequisites
 - [Node.js 18.17+](https://nodejs.org/)  
-- npm, yarn, or pnpm  
+- pnpm  
 
 ### Installation
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/AysoDev/saas-analytics-platform.git
-cd saas-analytics-platform
+git clone https://github.com/AysoDev/saas-analytics.git
+cd saas-analytics
 ```
 
 2. **Install dependencies**
 ```bash
 pnpm install
-# or
-yarn install
-# or
-npm install
 ```
 
 3. **Run the development server**
 ```bash
-pnpm dev
-# or
-yarn dev
-# or
-npm run dev
+pnpm run dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser 🚀  
 
 ---
 
-## 📸 Screenshots (Demo)
+## Live Demo
 
-> Add some dashboard screenshots or GIFs here.  
-> Example: **Landing page → Dashboard → Analytics detail view**.  
+> [View Live Demo](https://saas-analytics.vercel.app)
 
 ---
 
