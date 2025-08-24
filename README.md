@@ -9,8 +9,8 @@
 </p>
 
 <!-- Workflow / CI -->
-![Build](https://img.shields.io/github/actions/workflow/status/AysoDev/saas-analytics/ci.yml?style=for-the-badge)
-![Tests](https://img.shields.io/github/actions/workflow/status/AysoDev/saas-analytics/tests.yml?label=tests&style=for-the-badge)
+![Build](https://img.shields.io/github/actions/workflow/status/AysoDev/saas-analytics/saas-analytics/ci.yml?style=for-the-badge)
+![Tests](https://img.shields.io/github/actions/workflow/status/AysoDev/saas-analytics/saas-analytics/tests.yml?label=tests&style=for-the-badge)
 
 <!-- Deployment -->
 ![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)
