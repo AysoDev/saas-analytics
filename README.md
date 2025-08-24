@@ -8,6 +8,13 @@
   <img src="https://img.shields.io/github/license/AysoDev/saas-analytics?style=for-the-badge" alt="License">
 </p>
 
+<!-- Workflow / CI -->
+![Build](https://img.shields.io/github/actions/workflow/status/AysoDev/saas-analytics/ci.yml?style=for-the-badge)
+![Tests](https://img.shields.io/github/actions/workflow/status/AysoDev/saas-analytics/tests.yml?label=tests&style=for-the-badge)
+
+<!-- Deployment -->
+![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)
+
 <p align="center">
   <strong>A modern, open-source analytics dashboard for SaaS companies</strong><br/>
   Monitor revenue, track user behavior, and measure product health — built with <code>Next.js App Router</code> & <code>TypeScript</code>.
@@ -52,13 +59,98 @@ This platform empowers **founders, product managers, and internal admin teams** 
 ## 🏗️ Project Structure
 
 ```
-saas-analytics-platform/
-├── app/                # Next.js App Router pages & layouts
-├── components/         # Reusable UI components
-├── lib/                # Utilities and helpers
-├── public/             # Static assets (images, icons, etc.)
-├── styles/             # Global styles and CSS variables
-└── package.json        # Dependencies and scripts
+saas-analytics/
+├─ public/
+├─ src/
+│  ├─ app/
+│  │  ├─ dashboard/
+│  │  │  ├─ customers/
+│  │  │  │  ├─ layout.tsx
+│  │  │  │  └─ page.tsx
+│  │  │  ├─ layout.tsx
+│  │  │  ├─ LayoutWrapper.tsx
+│  │  │  └─ page.tsx
+│  │  ├─ forgot-password/
+│  │  │  ├─ layout.tsx
+│  │  │  └─ page.tsx
+│  │  ├─ favicon.ico
+│  │  ├─ globals.css
+│  │  ├─ layout.tsx
+│  │  ├─ page.tsx
+│  │  └─ theme.css
+│  └─ components/
+│     ├─ pages/
+│     │  ├─ CustomerFilter/
+│     │  │  ├─ Main.css
+│     │  │  ├─ Main.tsx
+│     │  │  └─ Types.ts
+│     │  ├─ Customers/
+│     │  │  ├─ Main.css
+│     │  │  ├─ Main.tsx
+│     │  │  └─ Types.ts
+│     │  ├─ CustomerTable/
+│     │  │  ├─ CustomerDetails/
+│     │  │  │  ├─ Main.css
+│     │  │  │  ├─ Main.tsx
+│     │  │  │  └─ Types.ts
+│     │  │  ├─ Main.css
+│     │  │  ├─ Main.tsx
+│     │  │  └─ Types.ts
+│     │  ├─ Dashboard/
+│     │  │  ├─ Main.css
+│     │  │  ├─ Main.tsx
+│     │  │  ├─ Metrics.tsx
+│     │  │  └─ Types.ts
+│     │  ├─ FPassword/
+│     │  │  ├─ Main.css
+│     │  │  ├─ Main.tsx
+│     │  │  └─ Types.ts
+│     │  ├─ Header/
+│     │  │  ├─ Main.css
+│     │  │  ├─ Main.tsx
+│     │  │  └─ Types.ts
+│     │  ├─ Login/
+│     │  │  ├─ Main.css
+│     │  │  ├─ Main.tsx
+│     │  │  └─ Types.ts
+│     │  └─ Sidenav/
+│     │     ├─ Main.css
+│     │     ├─ Main.tsx
+│     │     └─ Types.ts
+│     └─ widgets/
+│        ├─ Card/
+│        │  ├─ Main.css
+│        │  ├─ Main.tsx
+│        │  └─ Types.ts
+│        ├─ Chart/
+│        │  ├─ Main.css
+│        │  ├─ Main.tsx
+│        │  └─ Types.ts
+│        ├─ Metric/
+│        │  ├─ Main.css
+│        │  ├─ Main.tsx
+│        │  └─ Types.ts
+│        ├─ Modal/
+│        │  ├─ Main.css
+│        │  ├─ Main.tsx
+│        │  └─ Types.ts
+│        ├─ PathTracker/
+│        │  ├─ Main.css
+│        │  ├─ Main.tsx
+│        │  └─ Types.ts
+│        └─ UserTracker/
+│           ├─ Main.css
+│           ├─ Main.tsx
+│           └─ Types.ts
+├─ .gitignore
+├─ eslint.config.mjs
+├─ next-env.d.ts
+├─ next.config.ts
+├─ package.json
+├─ pnpm-lock.yaml
+├─ postcss.config.mjs
+├─ README.md
+└─ tsconfig.json
 ```
 
 ---
