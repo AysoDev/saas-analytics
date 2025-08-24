@@ -52,7 +52,7 @@ This platform empowers **founders, product managers, and internal admin teams** 
 - ✅ **Future-ready**: Easily extendable for APIs, multi-tenant SaaS, and custom integrations  
 
 ---
-
+<!-- Project Structure -->
 ## 🏗️ Project Structure
 
 ```
