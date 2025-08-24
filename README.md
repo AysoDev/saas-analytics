@@ -4,8 +4,8 @@
   <img src="https://img.shields.io/badge/Next.js-13.0+-black?style=for-the-badge&logo=next.js" alt="Next.js">
   <img src="https://img.shields.io/badge/TypeScript-4.9+-blue?style=for-the-badge&logo=typescript" alt="TypeScript">
   <img src="https://img.shields.io/badge/Open%20Source-Yes-green?style=for-the-badge" alt="Open Source">
-  <img src="https://img.shields.io/github/stars/AysoDev/saas-analytics-platform?style=for-the-badge" alt="GitHub stars">
-  <img src="https://img.shields.io/github/license/AysoDev/saas-analytics-platform?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/github/stars/AysoDev/saas-analytics?style=for-the-badge" alt="GitHub stars">
+  <img src="https://img.shields.io/github/license/AysoDev/saas-analytics?style=for-the-badge" alt="License">
 </p>
 
 <p align="center">
