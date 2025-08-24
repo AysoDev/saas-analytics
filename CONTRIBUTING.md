@@ -9,7 +9,7 @@ First of all, **thank you for considering contributing** to this project! Your h
 There are several ways to contribute:
 
 ### 🐛 Reporting Bugs
-- Check the [issues](https://github.com/AysoDev/saas-analytics-platform/issues) to see if it’s already reported.
+- Check the [issues](https://github.com/AysoDev/saas-analytics/issues) to see if it’s already reported.
 - Open a new issue with:
   - A clear title
   - Steps to reproduce the bug
@@ -17,7 +17,7 @@ There are several ways to contribute:
   - Screenshots or logs if applicable
 
 ### 💡 Suggesting Features
-- Check the [issues](https://github.com/AysoDev/saas-analytics-platform/issues) for existing suggestions.
+- Check the [issues](https://github.com/AysoDev/saas-analytics/issues) for existing suggestions.
 - Open a new issue with:
   - Feature description
   - Use case or problem it solves
@@ -27,7 +27,7 @@ There are several ways to contribute:
 1. Fork the repository
 2. Clone your fork locally
    ```bash
-   git clone https://github.com/your-username/saas-analytics-platform.git
+   git clone https://github.com/your-username/saas-analytics.git
    ```
 3. Create a branch for your feature/fix
    ```bash
@@ -68,11 +68,7 @@ There are several ways to contribute:
 
 - Run tests before submitting PRs
 ```bash
-npm test
-# or
-yarn test
-# or
-pnpm test
+pnpm run test
 ```
 - Add tests for new features when possible
 - Make sure all existing tests pass
