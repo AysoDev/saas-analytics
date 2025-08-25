@@ -7,14 +7,14 @@
 }
 
 .metric:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
 
 .metric-header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1rem;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 1.5rem;
 }
 
 .metric-title {
@@ -33,6 +33,10 @@
   border-radius: 50px;
   background-color: var(--primary);
   color: var(--primary-foreground);
+}
+
+.metric-icon.shimmer-bg {
+    background-color: var(--accent);
 }
 
 .metric-content {

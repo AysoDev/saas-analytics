@@ -27,8 +27,8 @@ export const Metric = ({
   return (
     <div className="metric">
       <div className="metric-header">
-        <h3 className="metric-title">{title}</h3>
         <div className="metric-icon">{icon}</div>
+        <h3 className="metric-title">{title}</h3>
       </div>
       <div className="metric-content">
         <p className="metric-value">{formatValue()}</p>
@@ -46,8 +46,8 @@ export const Metric = ({
 export const MetricSkeleton = () => (
   <div className="metric">
     <div className="metric-header">
-      <div className="metric-title shimmer-bg" style={{width: 80, height: 20, borderRadius: 6}} />
       <div className="metric-icon shimmer-bg" style={{width: 32, height: 32, borderRadius: '50%'}} />
+      <div className="metric-title shimmer-bg" style={{width: 80, height: 20, borderRadius: 6}} />
     </div>
     <div className="metric-content">
       <div className="metric-value shimmer-bg" style={{width: 60, height: 28, borderRadius: 6}} />

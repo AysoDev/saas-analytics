@@ -88,7 +88,7 @@ export const Sidenav = ({ isOpen, onToggle }: SidenavProps) => {
             onClick={onToggle}
             aria-label={isOpen ? 'Close menu' : 'Open menu'}
           >
-            <ChevronLeft size={20} />
+            <ChevronLeft size={18} />
           </button>) : null }
           { isOpen ? null : (<button
             className='toggle'

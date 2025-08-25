@@ -1,49 +1,54 @@
 :root {
   /* Light theme */
-  --light-background: #ffffff;
-  --light-foreground: #f8fafc;
-  --light-primary: #3b82f6;
+  --light-background: #f8fafc;
+  --light-foreground: #ffffff;
+  --light-primary: #2563eb;
   --light-primary-foreground: #ffffff;
   --light-secondary: #f1f5f9;
   --light-secondary-foreground: #0f172a;
-  --light-muted: #f1f5f9;
+  --light-muted: #f9fafb;
   --light-muted-foreground: #64748b;
-  --light-accent: #f1f5f9;
+  --light-accent: #e2e8f0;
   --light-accent-foreground: #0f172a;
-  --light-border: #e2e8f0;
+  --light-border: #d1d5db;
   --light-card: #ffffff;
   --light-card-foreground: #0f172a;
-  --light-chart-1: #3b82f6;
-  --light-chart-2: #8b5cf6;
-  --light-chart-3: #ec4899;
-  --light-chart-4: #f59e0b;
-  --light-chart-5: #10b981;
-  
+
+  /* Charts */
+  --light-chart-1: #2563eb;
+  --light-chart-2: #7c3aed;
+  --light-chart-3: #db2777;
+  --light-chart-4: #d97706;
+  --light-chart-5: #059669;
+
   /* Dark theme */
-  --dark-background: #0f172a;
-  --dark-foreground: #1e293b;
+  --dark-background: #0d1117;
+  --dark-foreground: #161b22;
   --dark-primary: #3b82f6;
   --dark-primary-foreground: #ffffff;
   --dark-secondary: #1e293b;
-  --dark-secondary-foreground: #f1f5f9;
-  --dark-muted: #1e293b;
+  --dark-secondary-foreground: #e2e8f0;
+  --dark-muted: #1c1f26;
   --dark-muted-foreground: #94a3b8;
-  --dark-accent: #1e293b;
-  --dark-accent-foreground: #f1f5f9;
-  --dark-border: #334155;
-  --dark-card: #1e293b;
+  --dark-accent: #2d3748;
+  --dark-accent-foreground: #f8fafc;
+  --dark-border: #2a3340;
+  --dark-card: #161b22;
   --dark-card-foreground: #f1f5f9;
-  --dark-chart-1: #3b82f6;
-  --dark-chart-2: #8b5cf6;
-  --dark-chart-3: #ec4899;
-  --dark-chart-4: #f59e0b;
-  --dark-chart-5: #10b981;
-  
+
+  /* Charts */
+  --dark-chart-1: #60a5fa;
+  --dark-chart-2: #a78bfa;
+  --dark-chart-3: #f472b6;
+  --dark-chart-4: #fbbf24;
+  --dark-chart-5: #34d399;
+
   /* Common */
   --radius: 0.5rem;
   --sidenav-width: 16rem;
   --sidenav-width-collapsed: 4.8rem;
 }
+
 
 @media (min-width: 768px) {
   :root {

@@ -3,36 +3,46 @@
 import { useEffect, useRef } from 'react'
 import { ChartProps } from './Types'
 import './Main.css'
-import { Chart as ChartJS } from "chart.js"
+import { Chart as ChartJS } from 'chart.js'
 
 export const Chart = ({ data, type, title, height = 300 }: ChartProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const chartRef = useRef<ChartJS | null>(null)
 
   useEffect(() => {
-    // Dynamically import Chart.js to avoid SSR issues
     const initChart = async () => {
       if (typeof window !== 'undefined') {
         const ChartJS = (await import('chart.js/auto')).default
         const ctx = canvasRef.current?.getContext('2d')
-        
-        if (ctx && data) {
-          if (chartRef.current) {
-            chartRef.current.destroy()
+
+        const legendSpacingPlugin = {
+          id: 'legendSpacing',
+          beforeInit(chart: any) {
+            if (!chart.legend) return
+            const fit = chart.legend.fit
+            chart.legend.fit = function fitWithSpacing() {
+              fit.bind(chart.legend)()
+              this.height += 16
+            }
           }
+        }
+
+        if (ctx && data) {
+          if (chartRef.current) chartRef.current.destroy()
 
           chartRef.current = new ChartJS(ctx, {
             type,
             data: {
               labels: data.labels,
-              datasets: data.datasets.map((dataset, i) => ({
+              datasets: data.datasets.map((dataset: any, i: number) => ({
                 ...dataset,
                 borderRadius: 4,
                 borderColor: 'transparent',
-                backgroundColor: getComputedStyle(document.documentElement).getPropertyValue(`--chart-${(i % 5) + 1}`) || '#3b82f6',
-                // For line charts, set borderColor
+                backgroundColor:
+                  getComputedStyle(document.documentElement).getPropertyValue(`--chart-${(i % 5) + 1}`) || '#3b82f6',
                 ...(type === 'line' && {
-                  borderColor: getComputedStyle(document.documentElement).getPropertyValue(`--chart-${(i % 5) + 1}`) || '#3b82f6',
+                  borderColor:
+                    getComputedStyle(document.documentElement).getPropertyValue(`--chart-${(i % 5) + 1}`) || '#3b82f6',
                   backgroundColor: 'transparent'
                 })
               }))
@@ -48,7 +58,9 @@ export const Chart = ({ data, type, title, height = 300 }: ChartProps) => {
                     usePointStyle: true,
                     padding: 20,
                     font: {
-                      family: getComputedStyle(document.documentElement).getPropertyValue('--font-family') || 'Segoe UI, Roboto, Ubuntu, sans-serif',
+                      family:
+                        getComputedStyle(document.documentElement).getPropertyValue('--font-family') ||
+                        'Segoe UI, Roboto, Ubuntu, sans-serif',
                       size: 14,
                       weight: 500
                     }
@@ -58,8 +70,11 @@ export const Chart = ({ data, type, title, height = 300 }: ChartProps) => {
                   display: !!title,
                   text: title,
                   color: getComputedStyle(document.documentElement).getPropertyValue('--card-foreground'),
+                  padding: { bottom: 6 },
                   font: {
-                    family: getComputedStyle(document.documentElement).getPropertyValue('--font-family') || 'Segoe UI, Roboto, Ubuntu, sans-serif',
+                    family:
+                      getComputedStyle(document.documentElement).getPropertyValue('--font-family') ||
+                      'Segoe UI, Roboto, Ubuntu, sans-serif',
                     size: 16,
                     weight: 600
                   }
@@ -73,53 +88,63 @@ export const Chart = ({ data, type, title, height = 300 }: ChartProps) => {
                   padding: 12,
                   cornerRadius: 8,
                   titleFont: {
-                    family: getComputedStyle(document.documentElement).getPropertyValue('--font-family') || 'Segoe UI, Roboto, Ubuntu, sans-serif',
+                    family:
+                      getComputedStyle(document.documentElement).getPropertyValue('--font-family') ||
+                      'Segoe UI, Roboto, Ubuntu, sans-serif',
                     size: 14,
                     weight: 'bold'
                   },
                   bodyFont: {
-                    family: getComputedStyle(document.documentElement).getPropertyValue('--font-family') || 'Segoe UI, Roboto, Ubuntu, sans-serif',
+                    family:
+                      getComputedStyle(document.documentElement).getPropertyValue('--font-family') ||
+                      'Segoe UI, Roboto, Ubuntu, sans-serif',
                     size: 13
                   },
                   callbacks: {
-                    label: function(context) {
-                      const label = context.dataset.label || '';
-                      const value = context.parsed.y ?? context.parsed;
-                      if (label === 'Revenue') {
-                        return `${label}: $${value.toLocaleString()}`;
-                      }
-                      return `${label}: ${value}`;
+                    label(context: any) {
+                      const label = context.dataset.label || ''
+                      const value = context.parsed.y ?? context.parsed
+                      if (label === 'Revenue') return `${label}: $${value.toLocaleString()}`
+                      return `${label}: ${value}`
                     }
                   }
                 }
               },
-              scales: type !== 'pie' ? {
-                x: {
-                  grid: {
-                    color: getComputedStyle(document.documentElement).getPropertyValue('--border')
-                  },
-                  ticks: {
-                    color: getComputedStyle(document.documentElement).getPropertyValue('--muted-foreground'),
-                    font: {
-                      family: getComputedStyle(document.documentElement).getPropertyValue('--font-family') || 'Segoe UI, Roboto, Ubuntu, sans-serif',
-                      size: 13
+              scales:
+                type !== 'pie'
+                  ? {
+                      x: {
+                        grid: {
+                          color: getComputedStyle(document.documentElement).getPropertyValue('--border')
+                        },
+                        ticks: {
+                          color: getComputedStyle(document.documentElement).getPropertyValue('--muted-foreground'),
+                          font: {
+                            family:
+                              getComputedStyle(document.documentElement).getPropertyValue('--font-family') ||
+                              'Segoe UI, Roboto, Ubuntu, sans-serif',
+                            size: 13
+                          }
+                        }
+                      },
+                      y: {
+                        grid: {
+                          color: getComputedStyle(document.documentElement).getPropertyValue('--border')
+                        },
+                        ticks: {
+                          color: getComputedStyle(document.documentElement).getPropertyValue('--muted-foreground'),
+                          font: {
+                            family:
+                              getComputedStyle(document.documentElement).getPropertyValue('--font-family') ||
+                              'Segoe UI, Roboto, Ubuntu, sans-serif',
+                            size: 13
+                          }
+                        }
+                      }
                     }
-                  }
-                },
-                y: {
-                  grid: {
-                    color: getComputedStyle(document.documentElement).getPropertyValue('--border')
-                  },
-                  ticks: {
-                    color: getComputedStyle(document.documentElement).getPropertyValue('--muted-foreground'),
-                    font: {
-                      family: getComputedStyle(document.documentElement).getPropertyValue('--font-family') || 'Segoe UI, Roboto, Ubuntu, sans-serif',
-                      size: 13
-                    }
-                  }
-                }
-              } : undefined
-            }
+                  : undefined
+            },
+            plugins: [legendSpacingPlugin]
           })
         }
       }
@@ -127,11 +152,8 @@ export const Chart = ({ data, type, title, height = 300 }: ChartProps) => {
 
     initChart()
 
-    // Cleanup function to destroy chart on unmount
     return () => {
-      if (chartRef.current) {
-        chartRef.current.destroy()
-      }
+      if (chartRef.current) chartRef.current.destroy()
     }
   }, [data, type, title])
 
