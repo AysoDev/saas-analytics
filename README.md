@@ -1,4 +1,5 @@
 # 📊 SaaS Analytics Platform
+## Developed by AysoDev <img src="https://aysodev.vercel.app/aysodev.ico" alt="AysoDev">
 
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js-13.0+-black?style=for-the-badge&logo=next.js" alt="Next.js">
