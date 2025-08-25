@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel" alt="Vercel" />
+  <img src="https://img.shields.io/badge/Demo%20Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel" alt="Vercel" />
 </p>
 
 <p align="center">
