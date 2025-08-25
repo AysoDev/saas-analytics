@@ -36,9 +36,6 @@ export const Header = ({ onMenuToggle }: HeaderProps) => {
     <header className="header">
       <div className="header-left">
         <PathTracker />
-        <Suspense fallback={<UserTrackerSkeleton />}>
-            <UserTracker />
-        </Suspense>
       </div>
       
       <div className="header-right">
@@ -57,6 +54,9 @@ export const Header = ({ onMenuToggle }: HeaderProps) => {
           <button className="header-action">
             <Settings size={20} />
           </button>
+          <Suspense fallback={<UserTrackerSkeleton />}>
+            <UserTracker />
+          </Suspense>
         </div>
       </div>
     </header>
