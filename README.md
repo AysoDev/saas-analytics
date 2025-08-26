@@ -55,7 +55,7 @@ This platform empowers **founders, product managers, and internal admin teams** 
 
 ---
 <!-- Project Structure -->
-## 🏗️ Project Structure
+## 🏗️ Project Structure - Last Update @ 8/26/2025
 
 ```
 saas-analytics/
@@ -64,6 +64,9 @@ saas-analytics/
 │  ├─ app/
 │  │  ├─ dashboard/
 │  │  │  ├─ customers/
+│  │  │  │  ├─ layout.tsx
+│  │  │  │  └─ page.tsx
+│  │  │  ├─ revenue/
 │  │  │  │  ├─ layout.tsx
 │  │  │  │  └─ page.tsx
 │  │  │  ├─ layout.tsx
@@ -86,6 +89,7 @@ saas-analytics/
 │     │  ├─ Customers/
 │     │  │  ├─ Main.css
 │     │  │  ├─ Main.tsx
+│     │  │  ├─ Metrics.tsx
 │     │  │  └─ Types.ts
 │     │  ├─ CustomerTable/
 │     │  │  ├─ CustomerDetails/
@@ -111,6 +115,19 @@ saas-analytics/
 │     │  ├─ Login/
 │     │  │  ├─ Main.css
 │     │  │  ├─ Main.tsx
+│     │  │  └─ Types.ts
+│     │  ├─ revenue/
+│     │  │  ├─ Main.css
+│     │  │  ├─ Main.tsx
+│     │  │  └─ Types.ts
+│     │  ├─ RevenueChart/
+│     │  │  ├─ Main.css
+│     │  │  ├─ Main.tsx
+│     │  │  └─ Types.ts
+│     │  ├─ RevenueMetrics/
+│     │  │  ├─ Main.css
+│     │  │  ├─ Main.tsx
+│     │  │  ├─ MetricCard.tsx
 │     │  │  └─ Types.ts
 │     │  └─ Sidenav/
 │     │     ├─ Main.css
