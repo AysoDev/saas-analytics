@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SaaS Analytics Customers",
+  title: "SaaS Analytics Revenue",
   description: "Open-source analytics platform.",
 };
 
