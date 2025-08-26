@@ -21,6 +21,20 @@
   --light-chart-4: #d97706;
   --light-chart-5: #059669;
 
+  --light-bg-success: #dcfce7;
+  --light-color-success: #166534;
+  --light-bg-error: #fee2e2;
+  --light-color-error: #991b1b;
+  --light-bg-warning: #fef3c7;
+  --light-color-warning: #92400e;
+
+  --light-bg-primary: #dbeafe;
+  --light-color-primary: #1e40af;
+  --light-bg-premium: #f3e8ff;
+  --light-color-premium: #7e22ce;
+  --light-bg-enterprise: #ffedd5;
+  --light-color-enterprise: #c2410c;
+
   /* Dark theme */
   --dark-background: #0d1117;
   --dark-foreground: #161b22;
@@ -42,6 +56,21 @@
   --dark-chart-3: #f472b6;
   --dark-chart-4: #fbbf24;
   --dark-chart-5: #34d399;
+
+  --dark-bg-success: #166534;
+  --dark-color-success: #dcfce7;
+  --dark-bg-error: #991b1b;
+  --dark-color-error: #fee2e2;
+  --dark-bg-warning: #92400e;
+  --dark-color-warning: #fef3c7;
+
+  --dark-bg-primary: #1e40af;
+  --dark-color-primary: #dbeafe;
+  --dark-bg-premium: #7e22ce;
+  --dark-color-premium: #f3e8ff;
+  --dark-bg-enterprise: #c2410c;
+  --dark-color-enterprise: #ffedd5;
+
 
   /* Common */
   --radius: 0.5rem;
@@ -75,6 +104,20 @@ html {
   --chart-3: var(--light-chart-3);
   --chart-4: var(--light-chart-4);
   --chart-5: var(--light-chart-5);
+
+  --bg-success: var(--light-bg-success);
+  --color-success: var(--light-color-success);
+  --bg-error: var(--light-bg-error);
+  --color-error: var(--light-color-error);
+  --bg-warning: var(--light-bg-warning);
+  --color-warning: var(--light-color-warning);
+
+  --bg-primary: var(--light-bg-primary);
+  --color-primary: var(--light-color-primary);
+  --bg-premium: var(--light-bg-premium);
+  --color-premium: var(--light-color-premium);
+  --bg-enterprise: var(--light-bg-enterprise);
+  --color-enterprise: var(--light-color-enterprise);
 }
 
 html.light {
@@ -96,6 +139,20 @@ html.light {
   --chart-3: var(--light-chart-3);
   --chart-4: var(--light-chart-4);
   --chart-5: var(--light-chart-5);
+
+  --bg-success: var(--light-bg-success);
+  --color-success: var(--light-color-success);
+  --bg-error: var(--light-bg-error);
+  --color-error: var(--light-color-error);
+  --bg-warning: var(--light-bg-warning);
+  --color-warning: var(--light-color-warning);
+
+  --bg-primary: var(--light-bg-primary);
+  --color-primary: var(--light-color-primary);
+  --bg-premium: var(--light-bg-premium);
+  --color-premium: var(--light-color-premium);
+  --bg-enterprise: var(--light-bg-enterprise);
+  --color-enterprise: var(--light-color-enterprise);
 }
 
 html.dark {
@@ -117,6 +174,20 @@ html.dark {
   --chart-3: var(--dark-chart-3);
   --chart-4: var(--dark-chart-4);
   --chart-5: var(--dark-chart-5);
+
+  --bg-success: var(--dark-bg-success);
+  --color-success: var(--dark-color-success);
+  --bg-error: var(--dark-bg-error);
+  --color-error: var(--dark-color-error);
+  --bg-warning: var(--dark-bg-warning);
+  --color-warning: var(--dark-color-warning);
+
+  --bg-primary: var(--dark-bg-primary);
+  --color-primary: var(--dark-color-primary);
+  --bg-premium: var(--dark-bg-premium);
+  --color-premium: var(--dark-color-premium);
+  --bg-enterprise: var(--dark-bg-enterprise);
+  --color-enterprise: var(--dark-color-enterprise);
 }
 
 * {

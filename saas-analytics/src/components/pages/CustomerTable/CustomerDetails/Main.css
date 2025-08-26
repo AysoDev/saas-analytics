@@ -139,18 +139,18 @@
 }
 
 .status-active {
-  background-color: #dcfce7;
-  color: #166534;
+  background-color: var(--bg-success);
+  color: var(--color-success);
 }
 
 .status-inactive {
-  background-color: #fee2e2;
-  color: #991b1b;
+  background-color: var(--bg-error);
+  color: var(--color-error);
 }
 
 .status-pending {
-  background-color: #fef3c7;
-  color: #92400e;
+  background-color: var(--bg-warning);
+  color: var(--color-warning);
 }
 
 /* Plan badges */
@@ -170,18 +170,18 @@
 }
 
 .plan-basic {
-  background-color: #dbeafe;
-  color: #1e40af;
+  background-color: var(--bg-primary);
+  color: var(--color-primary);
 }
 
 .plan-premium {
-  background-color: #f3e8ff;
-  color: #7e22ce;
+  background-color: var(--bg-premium);
+  color: var(--color-premium);
 }
 
 .plan-enterprise {
-  background-color: #ffedd5;
-  color: #c2410c;
+  background-color: var(--bg-enterprise);
+  color: var(--color-enterprise);
 }
 
 /* Buttons */
