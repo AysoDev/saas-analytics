@@ -22,7 +22,7 @@ export default function NotFound() {
         </h2>
         
         <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-          Oops! The page you're looking for seems to have wandered off into the digital void. 
+          Oops! The page you&apos;re looking for seems to have wandered off into the digital void. 
           It might be under development or temporarily unavailable.
         </p>
 
