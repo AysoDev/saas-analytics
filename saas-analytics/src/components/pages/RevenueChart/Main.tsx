@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { ChartProps } from '@/components/widgets/Chart/Types'
+import { Chart } from 'chart.js/auto';
 import './Main.css'
 
 interface RevenueChartProps {
@@ -20,7 +21,7 @@ const chartColors = [
 
 export const RevenueChart = ({ data, metric }: RevenueChartProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const chartRef = useRef<any>(null)
+  const chartRef = useRef<Chart | null>(null)
 
   useEffect(() => {
     const initChart = async () => {
