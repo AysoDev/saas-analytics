@@ -8,7 +8,6 @@ export interface Customer {
   createdAt: string
   lastLogin: string
   plan: 'free' | 'basic' | 'premium' | 'enterprise'
-  revenue: number
   location: string
   avatar: string
 }

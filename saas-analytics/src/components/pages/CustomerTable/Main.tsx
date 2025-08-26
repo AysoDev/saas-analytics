@@ -31,10 +31,6 @@ export const CustomerTable = ({ customers, isLoading, onRefresh }: CustomerTable
   const startIndex = (currentPage - 1) * itemsPerPage
   const paginatedCustomers = customers.slice(startIndex, startIndex + itemsPerPage)
 
-  const handleEdit = (customer: Customer) => {
-    console.log('Edit customer:', customer)
-  }
-
   const handleDelete = (customer: Customer) => {
     console.log('Delete customer:', customer)
   }
@@ -115,7 +111,6 @@ export const CustomerTable = ({ customers, isLoading, onRefresh }: CustomerTable
               <th>Company</th>
               <th>Status</th>
               <th>Plan</th>
-              <th>Revenue</th>
               <th>Location</th>
               <th>Last Login</th>
               <th>Actions</th>
@@ -142,9 +137,6 @@ export const CustomerTable = ({ customers, isLoading, onRefresh }: CustomerTable
                 <td>
                   <PlanBadge plan={customer.plan} />
                 </td>
-                <td>
-                  ${customer.revenue}/mo
-                </td>
                 <td>{customer.location}</td>
                 <td>{new Date(customer.lastLogin).toLocaleDateString()}</td>
                 <td>
@@ -155,13 +147,6 @@ export const CustomerTable = ({ customers, isLoading, onRefresh }: CustomerTable
                       title="View"
                     >
                       <Eye size={16} />
-                    </button>
-                    <button
-                      className="action-btn"
-                      onClick={() => handleEdit(customer)}
-                      title="Edit"
-                    >
-                      <Edit size={16} />
                     </button>
                     <button
                       className="action-btn danger"

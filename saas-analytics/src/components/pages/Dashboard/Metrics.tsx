@@ -1,16 +1,13 @@
 'use client';
 
 import { useState, useEffect } from "react";
-import { Suspense } from "react";
 import { Metric } from "@/components/widgets/Metric/Main";
 import { MetricSkeleton } from "@/components/widgets/Metric/Main";
 import { 
   DollarSign, 
   Users, 
-  TrendingUp, 
-  Activity 
+  TrendingUp
 } from 'lucide-react';
-import type { DashboardData } from "./Types";
 import type { DashboardMetrics } from "./Types";
 
 

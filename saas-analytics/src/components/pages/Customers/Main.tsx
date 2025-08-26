@@ -11,7 +11,7 @@ import {
 import { Customer, CustomersFilters, CustomersStats } from './Types'
 import { CustomerTable } from '@/components/pages/CustomerTable/Main'
 import { CustomerFilters } from '../CustomerFilter/Main'
-import { Metric } from '@/components/widgets/Metric/Main'
+import CustomersMetricCards from './Metrics'
 import { Card } from '@/components/widgets/Card/Main'
 import './Main.css'
 
@@ -137,7 +137,6 @@ export const Customers = () => {
         createdAt: '2023-01-15',
         lastLogin: '2024-01-20',
         plan: 'premium',
-        revenue: 299,
         location: 'New York, USA',
         avatar: '/users/user1.jpg'
       },
@@ -151,7 +150,6 @@ export const Customers = () => {
         createdAt: '2023-02-20',
         lastLogin: '2024-01-19',
         plan: 'enterprise',
-        revenue: 299,
         location: 'San Francisco, USA',
         avatar: '/users/user2.jpg'
       },
@@ -165,7 +163,6 @@ export const Customers = () => {
         createdAt: '2024-01-05',
         lastLogin: '2024-01-18',
         plan: 'basic',
-        revenue: 29,
         location: 'Chicago, USA',
         avatar: '/users/user3.jpg'
       },
@@ -179,7 +176,6 @@ export const Customers = () => {
         createdAt: '2023-11-10',
         lastLogin: '2023-12-15',
         plan: 'premium',
-        revenue: 99,
         location: 'Los Angeles, USA',
         avatar: '/users/user4.jpg'
       },
@@ -193,11 +189,10 @@ export const Customers = () => {
         createdAt: '2023-08-22',
         lastLogin: '2024-01-20',
         plan: 'enterprise',
-        revenue: 299,
         location: 'Boston, USA',
         avatar: '/users/user5.jpg'
       },
-              {
+      {
         id: '6',
         name: 'Sophia Martinez',
         email: 'sophia@starkindustries.com',
@@ -207,7 +202,6 @@ export const Customers = () => {
         createdAt: '2023-09-10',
         lastLogin: '2024-02-14',
         plan: 'premium',
-        revenue: 189,
         location: 'Los Angeles, USA',
         avatar: '/users/user1.jpg'
         },
@@ -221,7 +215,6 @@ export const Customers = () => {
         createdAt: '2023-10-02',
         lastLogin: '2023-12-22',
         plan: 'basic',
-        revenue: 59,
         location: 'Gotham, USA',
         avatar: '/users/user2.jpg'
         },
@@ -235,7 +228,6 @@ export const Customers = () => {
         createdAt: '2023-11-11',
         lastLogin: '2024-01-30',
         plan: 'enterprise',
-        revenue: 349,
         location: 'New York, USA',
         avatar: '/users/user3.jpg'
         },
@@ -249,7 +241,6 @@ export const Customers = () => {
         createdAt: '2023-12-05',
         lastLogin: '2024-02-10',
         plan: 'basic',
-        revenue: 79,
         location: 'Raccoon City, USA',
         avatar: '/users/user4.jpg'
         },
@@ -263,7 +254,6 @@ export const Customers = () => {
         createdAt: '2024-01-08',
         lastLogin: '2024-03-01',
         plan: 'enterprise',
-        revenue: 229,
         location: 'Detroit, USA',
         avatar: '/users/user5.jpg'
         },
@@ -277,7 +267,6 @@ export const Customers = () => {
         createdAt: '2024-01-20',
         lastLogin: '2024-02-18',
         plan: 'enterprise',
-        revenue: 499,
         location: 'Seattle, USA',
         avatar: '/users/user1.jpg'
         },
@@ -291,7 +280,6 @@ export const Customers = () => {
         createdAt: '2024-02-02',
         lastLogin: '2024-03-10',
         plan: 'basic',
-        revenue: 99,
         location: 'San Francisco, USA',
         avatar: '/users/user2.jpg'
         },
@@ -305,7 +293,6 @@ export const Customers = () => {
         createdAt: '2024-02-15',
         lastLogin: '2024-03-20',
         plan: 'premium',
-        revenue: 279,
         location: 'Houston, USA',
         avatar: '/users/user3.jpg'
         }
@@ -337,23 +324,10 @@ export const Customers = () => {
 
       {/* Stats Cards */}
       <div className="customers-stats">
-        <Metric
-          title="Total Customers"
-          value={stats.total}
-          icon={<Users size={20} />}
-        />
-        <Metric
-          title="Active Customers"
-          value={stats.active}
-          change={+12.5}
-          icon={<Users size={20} />}
-        />
-        <Metric
-          title="MRR"
-          value={stats.mrr}
-          change={+8.2}
-          icon={<Users size={20} />}
-          format="currency"
+        <CustomersMetricCards
+            total={stats.total}
+            active={stats.active}
+            mrr={stats.mrr}
         />
       </div>
 
